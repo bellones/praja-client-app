@@ -1,0 +1,229 @@
+# OSX
+#
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+project.xcworkspace/xcuserdata/
+project.xcworkspace/xcshareddata/swiftpm/
+**/.xcode.env.local
+*.xcworkspace
+!default.xcworkspace
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+*.keystore
+!debug.keystore
+.ktlint/
+.kotlin/
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+bin/
+gen/
+out/
+release/
+.gradle/
+local.properties
+proguard/
+*.log
+
+# node.js
+#
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# React Native
+#
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+*.jsbundle
+*.bundle
+
+# Metro
+#
+.metro-health-check*
+metro.config.js.bak
+
+# Testing
+#
+/coverage
+*.lcov
+.nyc_output
+junit.xml
+
+# Yarn
+#
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# CocoaPods
+#
+ios/Pods/
+ios/Podfile.lock
+ios/build/
+ios/DerivedData/
+vendor/bundle/
+*.podspec.bak
+
+# Fastlane
+#
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+**/fastlane/README.md
+
+# Bundle artifacts
+#
+*.jsbundle
+
+# TypeScript
+#
+*.tsbuildinfo
+
+# Environment variables
+#
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+#
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Editor directories and files
+#
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*~
+
+# Temporary files
+#
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# OS generated files
+#
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# React Native Debugger
+#
+.vscode/launch.json
+
+# Watchman
+#
+.watchmanconfig
+
+# Flipper
+#
+.flipper/
+
+# Misc
+#
+*.pem
+*.p8
+*.key
+*.mobileprovision
+*.orig.*
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
