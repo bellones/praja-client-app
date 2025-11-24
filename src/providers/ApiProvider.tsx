@@ -1,5 +1,4 @@
 import React from 'react';
-import { apiClient } from '../services/api/client';
 
 interface ApiProviderProps {
   children: React.ReactNode;
@@ -26,4 +25,5 @@ export const ApiProvider: React.FC<ApiProviderProps> = ({ children }) => {
 
   return <>{children}</>;
 };
+
 

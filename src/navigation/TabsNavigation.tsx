@@ -26,7 +26,7 @@ export const MainTabs: React.FC = () => {
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: theme.colors.surface,
+          backgroundColor: theme.colors.background,
           borderTopColor: theme.colors.border,
         },
         tabBarActiveTintColor: theme.colors.primary,
