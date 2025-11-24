@@ -35,7 +35,7 @@ const LoginPage = () => {
         ref={scrollViewRef}
         contentContainerStyle={styles.scrollView}
         keyboardShouldPersistTaps="handled"
-        showsVerticalScrollIndicator={true}
+        showsVerticalScrollIndicator={false}
         bounces={true}
         alwaysBounceVertical={false}
       >
