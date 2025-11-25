@@ -50,3 +50,4 @@ const useForgotPasswordPage = () => {
 
 export default useForgotPasswordPage;
 
+
