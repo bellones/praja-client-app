@@ -1,9 +1,9 @@
-import { useMutation } from '@tanstack/react-query';
 import { CommonActions, useNavigation } from '@react-navigation/native';
-import { authService, ApiError } from '../../../../services/api/authService';
-import { useAuthStore } from '../../../../state';
-import { RootStackScreenProps } from '../../../../navigation/types';
+import { useMutation } from '@tanstack/react-query';
 import { LoginRequest } from '../../../../features/auth/types';
+import { RootStackScreenProps } from '../../../../navigation/types';
+import { ApiError, authService } from '../../../../services/api/authService';
+import { useAuthStore } from '../../../../state';
 
 export const useLoginMutation = () => {
   const navigation = useNavigation<RootStackScreenProps<'Auth'>['navigation']>();

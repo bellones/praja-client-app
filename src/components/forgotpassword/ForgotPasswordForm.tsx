@@ -28,3 +28,4 @@ const ForgotPasswordForm = ({ control, errors }: ForgotPasswordFormProps) => {
 
 export default ForgotPasswordForm;
 
+
