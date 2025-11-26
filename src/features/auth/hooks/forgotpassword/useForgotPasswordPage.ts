@@ -25,7 +25,7 @@ const useForgotPasswordPage = () => {
         console.log('Forgot password request:', data);
         
         // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve: any) => setTimeout(resolve, 2000));
         
         // TODO: Navigate to success screen or show success message
       } catch (error) {
