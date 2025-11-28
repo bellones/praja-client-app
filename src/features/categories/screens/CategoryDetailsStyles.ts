@@ -47,3 +47,4 @@ export const createCategoryDetailsStyles = (theme: AppTheme) =>
 
 
 
+
