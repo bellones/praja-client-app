@@ -7,6 +7,7 @@ import { ForgetPasswordScreen, LoginScreen, RecoverPasswordScreen, RegisterScree
 import { useTheme } from '../theme/ThemeProvider';
 import { MainTabs } from './TabsNavigation';
 import {
+  AppStackParamList,
   AuthStackParamList,
   RootStackParamList,
 } from './types';
@@ -14,6 +15,7 @@ import {
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 const AuthStack = createNativeStackNavigator<AuthStackParamList>();
+const AppStack = createNativeStackNavigator<AppStackParamList>();
 
 const AuthStackNavigator: React.FC = () => {
   return (
@@ -38,6 +40,18 @@ const AuthStackNavigator: React.FC = () => {
         component={RecoverPasswordScreen}
         options={{ headerShown: false }} />
     </AuthStack.Navigator>
+  );
+};
+
+const AppStackNavigator: React.FC = () => {
+  return (
+    <AppStack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <AppStack.Screen name="MainTabs" component={MainTabs} />
+    </AppStack.Navigator>
   );
 };
 
@@ -84,7 +98,7 @@ export const RootNavigator: React.FC = () => {
       >
         <RootStack.Screen name="Splash" component={SplashScreen} />
         <RootStack.Screen name="Auth" component={AuthStackNavigator} />
-        <RootStack.Screen name="App" component={MainTabs} />
+        <RootStack.Screen name="App" component={AppStackNavigator} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

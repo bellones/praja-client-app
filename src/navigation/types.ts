@@ -31,6 +31,11 @@ import type {
     Order: undefined;
     Profile: undefined;
   };
+
+  // 3) App Stack (contains tabs and other screens)
+  export type AppStackParamList = {
+    MainTabs: undefined;
+  };
   
   
   export type RootStackScreenProps<T extends keyof RootStackParamList> =
