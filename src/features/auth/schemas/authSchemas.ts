@@ -1,6 +1,6 @@
 import * as yup from 'yup';
 import { validateCPF } from '../../../utils/cpfValidation';
-import { unmaskCPF, unmaskDate, formatDateForAPI } from '../../../utils/masks';
+import { formatDateForAPI, unmaskDate } from '../../../utils/masks';
 
 // Login form validation schema
 export const loginSchema = yup.object().shape({
