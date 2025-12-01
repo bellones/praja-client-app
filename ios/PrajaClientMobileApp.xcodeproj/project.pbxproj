@@ -19,11 +19,11 @@
 		34C4EB455C5B4B4BA8486F78 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9157189A09494580598B68 /* Montserrat-ThinItalic.ttf */; };
 		35EA07E51DE14B11A50873F0 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DF1ED5AFBCB440829D8F167C /* Montserrat-Thin.ttf */; };
 		46B014CCFEA048EB92F7378F /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AA1407A99BC41FC94889112 /* Poppins-Thin.ttf */; };
+		494697133F33D2DBA668FA5F /* libPods-PrajaClientMobileApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE553449D7C3EBA6D800B4BC /* libPods-PrajaClientMobileApp.a */; };
 		50993731BA2C46FCBDB31EA9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8FCF5522EEC4E06A0706B5F /* Montserrat-Regular.ttf */; };
 		568794D8FEC4459C87A4C80E /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25C3A2CED7FB429B9CF19626 /* Montserrat-Medium.ttf */; };
 		5CF06381125544C0B31D1B32 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3D4AED01CBF4F30A9C42275 /* Poppins-ExtraLightItalic.ttf */; };
 		6022C0A098F3456CB51717EB /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E50B4DA27924B309E0DE0E6 /* Poppins-ExtraBoldItalic.ttf */; };
-		6979BC7DB0B96FECA5ED505F /* libPods-PrajaClientMobileApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 707CA339B77EA25944FD3890 /* libPods-PrajaClientMobileApp.a */; };
 		6A844F6B95534DB8B0CA650B /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51022B7F6110499281AC3104 /* Poppins-LightItalic.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		7AAB08EA82FA4F878FFEABEF /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58370142C69D4BCCADDA180E /* Montserrat-ExtraBold.ttf */; };
@@ -55,7 +55,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		008039859E2ADCFD7F51E3ED /* Pods-PrajaClientMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrajaClientMobileApp.debug.xcconfig"; path = "Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 		011CE7F1FA2548BB8B6ABA86 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Italic.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		07F90224233B40D89AF36755 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BoldItalic.ttf"; path = "../src/assets/fonts/Poppins/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		0F845B215DD34DDEA24AE613 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Italic-VariableFont_wght.ttf"; path = "../src/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 		1A9157189A09494580598B68 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-ThinItalic.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
 		1FCEAD284D01414EA0959B0C /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-VariableFont_wght.ttf"; path = "../src/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		25C3A2CED7FB429B9CF19626 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Medium.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		26228806D898EC301F7CA621 /* Pods-PrajaClientMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrajaClientMobileApp.release.xcconfig"; path = "Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp.release.xcconfig"; sourceTree = "<group>"; };
 		263944C995F64953A98E0771 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../src/assets/fonts/Poppins/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
 		32F81F0873C1404ABFB3536A /* OFL.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = OFL.txt; path = ../src/assets/fonts/Montserrat/OFL.txt; sourceTree = "<group>"; };
 		344C523F7CF14E52B7900365 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../src/assets/fonts/Poppins/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -75,12 +73,12 @@
 		4AA12F400A594D0CB7266E6F /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		51022B7F6110499281AC3104 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-LightItalic.ttf"; path = "../src/assets/fonts/Poppins/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
 		54B2676755EB44129B6BE1D1 /* README.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = README.txt; path = ../src/assets/fonts/Montserrat/README.txt; sourceTree = "<group>"; };
+		55445D1678D79C972021D023 /* Pods-PrajaClientMobileApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrajaClientMobileApp.debug.xcconfig"; path = "Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp.debug.xcconfig"; sourceTree = "<group>"; };
 		58370142C69D4BCCADDA180E /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-ExtraBold.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		5EA879622A1F46DAA63340EB /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Poppins/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		67AF1FAB418A4B79A20AF01D /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		682DC37C0EA74ED59F975668 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Italic.ttf"; path = "../src/assets/fonts/Poppins/Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		685FEB304B6E49C8A93C61DC /* Montserrat-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Black.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-Black.ttf"; sourceTree = "<group>"; };
-		707CA339B77EA25944FD3890 /* libPods-PrajaClientMobileApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrajaClientMobileApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PrajaClientMobileApp/AppDelegate.swift; sourceTree = "<group>"; };
 		7C0382C6EA96440DB3550BD5 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PrajaClientMobileApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,8 +93,10 @@
 		AAFD00F31EBD4519BB16A7B3 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../src/assets/fonts/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		BD1251A907934B9DB4245361 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Light.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		BF885958A7B5481B80E0C313 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		C8394E3AE5A6EDA5B5AE1E5C /* Pods-PrajaClientMobileApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrajaClientMobileApp.release.xcconfig"; path = "Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp.release.xcconfig"; sourceTree = "<group>"; };
 		C8FCF5522EEC4E06A0706B5F /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		CCE8F74DF3B1478F9AD61A72 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-BlackItalic.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		CE553449D7C3EBA6D800B4BC /* libPods-PrajaClientMobileApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrajaClientMobileApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D0D5CBE6164ED69A0D53C8 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../src/assets/fonts/Poppins/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		D623D3E369CD4C8E841728BF /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		DF1ED5AFBCB440829D8F167C /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Thin.ttf"; path = "../src/assets/fonts/Montserrat/static/Montserrat-Thin.ttf"; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6979BC7DB0B96FECA5ED505F /* libPods-PrajaClientMobileApp.a in Frameworks */,
+				494697133F33D2DBA668FA5F /* libPods-PrajaClientMobileApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				707CA339B77EA25944FD3890 /* libPods-PrajaClientMobileApp.a */,
+				CE553449D7C3EBA6D800B4BC /* libPods-PrajaClientMobileApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,8 +221,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				008039859E2ADCFD7F51E3ED /* Pods-PrajaClientMobileApp.debug.xcconfig */,
-				26228806D898EC301F7CA621 /* Pods-PrajaClientMobileApp.release.xcconfig */,
+				55445D1678D79C972021D023 /* Pods-PrajaClientMobileApp.debug.xcconfig */,
+				C8394E3AE5A6EDA5B5AE1E5C /* Pods-PrajaClientMobileApp.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -234,13 +234,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PrajaClientMobileApp" */;
 			buildPhases = (
-				C8E95BBCC26BF1C3E7158932 /* [CP] Check Pods Manifest.lock */,
+				48ED75803D3E4079448D3057 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				6204B921AA6E3AB08691F011 /* [CP] Embed Pods Frameworks */,
-				B6D479788A4DEB912B09BA6B /* [CP] Copy Pods Resources */,
+				B5FC01CFFDE72EC5DEB9545C /* [CP] Embed Pods Frameworks */,
+				C2D6F3DB5951653FC12AD35D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,41 +352,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		6204B921AA6E3AB08691F011 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B6D479788A4DEB912B09BA6B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C8E95BBCC26BF1C3E7158932 /* [CP] Check Pods Manifest.lock */ = {
+		48ED75803D3E4079448D3057 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,6 +374,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B5FC01CFFDE72EC5DEB9545C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D6F3DB5951653FC12AD35D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrajaClientMobileApp/Pods-PrajaClientMobileApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -424,7 +424,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 008039859E2ADCFD7F51E3ED /* Pods-PrajaClientMobileApp.debug.xcconfig */;
+			baseConfigurationReference = 55445D1678D79C972021D023 /* Pods-PrajaClientMobileApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -454,7 +454,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26228806D898EC301F7CA621 /* Pods-PrajaClientMobileApp.release.xcconfig */;
+			baseConfigurationReference = C8394E3AE5A6EDA5B5AE1E5C /* Pods-PrajaClientMobileApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
