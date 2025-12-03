@@ -1,3 +1,4 @@
+import React, { memo, useMemo } from "react";
 import { Control, FieldErrors } from "react-hook-form";
 import { StyleSheet, View } from "react-native";
 import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
@@ -8,28 +9,35 @@ import { Input } from "../input/Input";
 
 type SearchBarProps = {
   value: string;
+  placeholder: string;
   onChangeText: (text: string) => void;
   control: Control<SearchFormData>;
   errors: FieldErrors<SearchFormData>;
 }
 
-const SearchBar = ({ value, onChangeText, control,errors}: SearchBarProps) => {
+const SearchBar = memo(({ value, onChangeText, control, errors, placeholder}: SearchBarProps) => {
   const { theme } = useTheme();
-  const styles = createSearchBarStyles(theme);
+  const styles = useMemo(() => createSearchBarStyles(theme), [theme]);
+  
+  const rightIcon = useMemo(
+    () => <MagnifyingGlassIcon color={theme.colors.text} />,
+    [theme.colors.text]
+  );
+
   return (
     <View style={styles.container}>
       <Input
-        placeholder="Pesquisar"
+        placeholder={placeholder}
         value={value}
         control={control}
         name="search"
         onChangeText={onChangeText}
         error={errors.search?.message}
-        rightIcon={<MagnifyingGlassIcon color={theme.colors.text} />}
+        rightIcon={rightIcon}
       />
     </View>
-  )
-}
+  );
+});
 
 const createSearchBarStyles = (tm: AppTheme) => StyleSheet.create({
   container: {
