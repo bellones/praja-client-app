@@ -2,7 +2,7 @@ import { useForm } from "../../../auth/hooks/form/useForm";
 import { searchSchema } from "../../../auth/schemas/searchSchema";
 
 
-const useSearch = () => {
+const useSearchScreen = () => {
     
     const form = useForm<typeof searchSchema>({
         schema: searchSchema,
@@ -12,9 +12,10 @@ const useSearch = () => {
         mode: 'onChange',
     });
 
+
     return {
         form,
     };
 };
 
-export default useSearch;
+export default useSearchScreen;

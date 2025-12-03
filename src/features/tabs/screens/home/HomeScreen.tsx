@@ -1,11 +1,16 @@
 
-import { Text, View } from 'react-native'
+import { Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useTheme } from '../../../../theme/ThemeProvider';
+import createHomeStyles from './HomeStyles';
 
 const HomeScreen = () => {
+  const { theme } = useTheme();
+  const styles = createHomeStyles(theme);
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Início</Text>
+      </SafeAreaView>
   )
 }
 
