@@ -1,11 +1,13 @@
 import { memo, useMemo } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
+import Animated, { FadeInDown } from 'react-native-reanimated';
 import { Service } from "../../features/tabs/types";
 import { useTheme } from "../../theme/ThemeProvider";
 import { AppTheme } from "../../theme/types";
 
 type ServiceListItemProps = {
   service: Service;
+  index: number;
 }
 
 const ServiceListItem = memo(({ service }: ServiceListItemProps) => {
@@ -15,10 +17,17 @@ const ServiceListItem = memo(({ service }: ServiceListItemProps) => {
     [theme]
   );
 
+  // Use simple animation without dynamic delay to avoid worklet errors
+  const enteringAnimation = useMemo(
+    () => FadeInDown.springify(),
+    []
+  );
+
   return (
-    <View style={styles.container}>
+    <Animated.View
+      entering={enteringAnimation} style={styles.container}>
       <Text style={styles.name}>{service?.name ?? ''}</Text>
-    </View>
+    </Animated.View>
   );
 });
 

@@ -1,5 +1,6 @@
 import { memo, useCallback, useMemo } from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
+import Animated, { FadeInDown } from 'react-native-reanimated';
 import { Category, Service } from "../../features/tabs/types";
 import { useTheme } from "../../theme/ThemeProvider";
 import { AppTheme } from "../../theme/types";
@@ -7,6 +8,7 @@ import ServiceListItem from "./ServiceListItem";
 
 type CategoriesItemProps = {
   category: Category;
+  index: number;
 }
 
 export const CategoriesItem = memo(({ category }: CategoriesItemProps) => {
@@ -22,7 +24,7 @@ export const CategoriesItem = memo(({ category }: CategoriesItemProps) => {
   );
 
   const renderService = useCallback(
-    ({ item }: { item: Service }) => <ServiceListItem service={item} />,
+    ({ item, index: serviceIndex }: { item: Service, index: number }) => <ServiceListItem service={item} index={serviceIndex} />,
     []
   );
 
@@ -31,8 +33,15 @@ export const CategoriesItem = memo(({ category }: CategoriesItemProps) => {
     []
   );
 
+  // Use simple animation without dynamic delay to avoid worklet errors
+  const enteringAnimation = useMemo(
+    () => FadeInDown.springify(),
+    []
+  );
+
   return (
-    <View style={styles.container}>
+    <Animated.View
+      entering={enteringAnimation} style={styles.container}>
       <View style={styles.row}>
         <Text style={styles.name}>{category?.name ?? ''} </Text>
       </View>
@@ -44,7 +53,7 @@ export const CategoriesItem = memo(({ category }: CategoriesItemProps) => {
         keyExtractor={keyExtractor}
         contentContainerStyle={styles.servicesContainer}
       />
-    </View>
+    </Animated.View>
   );
 });
 

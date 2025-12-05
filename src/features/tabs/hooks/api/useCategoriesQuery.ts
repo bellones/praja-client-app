@@ -5,6 +5,7 @@ const useCategoriesQuery = () => {
     return useQuery({
         queryKey: ['categories'],
         queryFn: () => categoriesService.getCategories(),
+        
     });
 }
 
