@@ -14,7 +14,7 @@ const CategoriesList = ({ categories }: CategoriesListProps) => {
   const styles = useMemo(() => createCategoriesListStyles(theme), [theme]);
   
   const renderItem = useCallback(
-    ({ item }: { item: Category }) => <CategoriesItem category={item} />,
+    ({ item, index }: { item: Category, index: number }) => <CategoriesItem category={item} index={index} />,
     []
   );
 
