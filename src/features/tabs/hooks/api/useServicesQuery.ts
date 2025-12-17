@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { categoriesService } from "../../../../services/api/categororiesService";
+import { servicesService } from "../../../../services/api/servicesService";
 
-const useCategoriesQuery = () => {
+const useServicesQuery = () => {
     return useQuery({
-        queryKey: ['categories'],
-        queryFn: () => categoriesService.getCategories(),
+        queryKey: ['services'],
+        queryFn: () => servicesService.getServices(),
         enabled: true,
         staleTime: 1000 * 60 * 60 * 24, // 24 hours
         refetchOnWindowFocus: false,
@@ -15,4 +15,4 @@ const useCategoriesQuery = () => {
     });
 }
 
-export default useCategoriesQuery;
+export default useServicesQuery;

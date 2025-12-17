@@ -37,6 +37,7 @@ const Banner = () => {
 const createBannerStyles = (theme: AppTheme) => StyleSheet.create({
     container: {
         paddingVertical: theme.spacing(2),
+        height: 160,
     },
     item: {
         backgroundColor: theme.colors.disabled,

@@ -5,15 +5,15 @@ import { Service } from "../../features/tabs/types";
 import { useTheme } from "../../theme/ThemeProvider";
 import { AppTheme } from "../../theme/types";
 
-type ServiceListItemProps = {
+type HomeServiceListItemProps = {
   service: Service;
   index: number;
 }
 
-const ServiceListItem = memo(({ service }: ServiceListItemProps) => {
+const HomeServiceListItem = memo(({ service }: HomeServiceListItemProps) => {
   const { theme } = useTheme();
   const styles = useMemo(
-    () => createServiceListItemStyles(theme),
+    () => createHomeServiceListItemStyles(theme),
     [theme]
   );
 
@@ -31,9 +31,9 @@ const ServiceListItem = memo(({ service }: ServiceListItemProps) => {
   );
 });
 
-export default ServiceListItem;
+export default HomeServiceListItem;
 
-const createServiceListItemStyles = (theme: AppTheme) => StyleSheet.create({
+const createHomeServiceListItemStyles = (theme: AppTheme) => StyleSheet.create({
 
   container: {
     padding: theme.spacing(2),
@@ -43,7 +43,7 @@ const createServiceListItemStyles = (theme: AppTheme) => StyleSheet.create({
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-
+    marginRight: theme.spacing(4),
     
   },
   name: {
