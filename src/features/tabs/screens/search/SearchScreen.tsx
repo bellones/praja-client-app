@@ -1,9 +1,9 @@
 import React, { useCallback, useMemo } from 'react';
-import { FlatList, Text, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text, View } from 'react-native';
 import { CategoriesItem } from '../../../../components/categories/CategoriesItem';
 import CategoryItemSkeleton from '../../../../components/categories/CategoryItemSkeleton';
 import SearchBar from '../../../../components/categories/SearchBar';
+import { ListWithSkeleton } from '../../../../components/list';
 import { Category } from '../../../../features/tabs/types';
 import { useTheme } from '../../../../theme/ThemeProvider';
 import useCategoriesQuery from '../../hooks/api/useCategoriesQuery';
@@ -66,40 +66,25 @@ const SearchScreen = () => {
     [searchValue, handleSearchChange, form.control, form.formState.errors, styles]
   );
 
-  if (isLoading) {
-    return (
-      <SafeAreaView style={styles.container} edges={[ 'top', 'left', 'right']}>
-        <FlatList
-          data={skeletonData}
-          renderItem={renderSkeletonItem}
-          keyExtractor={skeletonKeyExtractor}
-          ListHeaderComponent={ListHeaderComponent}
-          contentContainerStyle={styles.listContainer}
-          showsVerticalScrollIndicator={false}
-          initialNumToRender={10}
-          maxToRenderPerBatch={10}
-          windowSize={10}
-          removeClippedSubviews={true}
-        />
-      </SafeAreaView>
-    );
-  }
-
   return (
-    <SafeAreaView style={styles.container} edges={[ 'top', 'left', 'right']}>
-      <FlatList
-        data={categoriesData}
-        renderItem={renderItem}
-        keyExtractor={keyExtractor}
-        ListHeaderComponent={ListHeaderComponent}
-        contentContainerStyle={styles.listContainer}
-        showsVerticalScrollIndicator={false}
-        initialNumToRender={10}
-        maxToRenderPerBatch={10}
-        windowSize={10}
-        removeClippedSubviews={true}
-      />
-    </SafeAreaView>
+    <ListWithSkeleton
+      loading={isLoading}
+      data={categoriesData}
+      skeletonData={skeletonData}
+      renderItem={renderItem}
+      renderSkeletonItem={renderSkeletonItem}
+      keyExtractor={keyExtractor}
+      skeletonKeyExtractor={skeletonKeyExtractor}
+      ListHeaderComponent={ListHeaderComponent}
+      containerStyle={styles.container}
+      contentContainerStyle={styles.listContainer}
+      edges={['top', 'left', 'right']}
+      initialNumToRender={10}
+      maxToRenderPerBatch={10}
+      windowSize={10}
+      removeClippedSubviews={true}
+      showsVerticalScrollIndicator={false}
+    />
   );
 };
 

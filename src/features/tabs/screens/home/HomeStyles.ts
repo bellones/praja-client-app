@@ -3,7 +3,6 @@ import { AppTheme } from "../../../../theme/types";
 
 const createHomeStyles = (theme: AppTheme) => StyleSheet.create({
     container: {
-        flex: 1,
         backgroundColor: theme.colors.background,
         paddingHorizontal: theme.spacing(4),
       },
