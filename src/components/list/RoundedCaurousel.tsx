@@ -65,12 +65,13 @@ const createRoundedCaurouselStyles = (theme: AppTheme) => {
             flexDirection: 'column',
             gap: theme.spacing(2),
             paddingVertical: theme.spacing(4),
+            paddingHorizontal: theme.spacing(4),
         },
         listContainer: {
             flexDirection: 'row',
             alignItems: 'flex-start',
             justifyContent: 'space-between',
-            gap: theme.spacing(6),
+            gap: theme.spacing(4),
         },
         title: {
             fontSize: 20,

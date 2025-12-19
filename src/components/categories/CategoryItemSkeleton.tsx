@@ -8,7 +8,7 @@ type CategoryItemSkeletonProps = {
   index?: number;
 }
 
-const CategoryItemSkeleton = memo(({ index = 0 }: CategoryItemSkeletonProps) => {
+const CategoryItemSkeleton = memo(({ }: CategoryItemSkeletonProps) => {
   const { theme } = useTheme();
   const styles = useMemo(
     () => createCategoryItemSkeletonStyles(theme),
@@ -51,7 +51,7 @@ const CategoryItemSkeleton = memo(({ index = 0 }: CategoryItemSkeletonProps) => 
 export default CategoryItemSkeleton;
 
 const createCategoryItemSkeletonStyles = (theme: AppTheme) => StyleSheet.create({
-  container: {
+  container: {    
     paddingVertical: theme.spacing(2),
     paddingHorizontal: theme.spacing(4),
     borderRadius: theme.radius.md,

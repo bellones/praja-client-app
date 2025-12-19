@@ -34,6 +34,7 @@ const createUserProfileStyles = (theme: AppTheme) => StyleSheet.create({
         justifyContent: 'space-between',
         flexDirection: 'row',
         alignItems: 'center',
+        paddingHorizontal: theme.spacing(4),
     },
     userInfo: {
         flex: 1,
