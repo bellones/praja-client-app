@@ -17,7 +17,6 @@ const useHomeScreen = () => {
     const { data: categories, isLoading: isLoadingCategories } = useCategoriesQuery();
     const { data: services, isLoading: isLoadingServices } = useServicesQuery();
     const categoriesData = useMemo(() => categories ?? [], [categories]);
-    const servicesData = useMemo(() => (services ?? []).slice(0, 21), [services]);
     
     // Select 3 random categories
     const randomCategories = useMemo(() => {
@@ -26,10 +25,17 @@ const useHomeScreen = () => {
         return shuffled.slice(0, 3);
     }, [categoriesData]);
     
+    // Select 12 random services
+    const servicesData = useMemo(() => {
+        if (!services || services.length === 0) return [];
+        const shuffled = [...services].sort(() => Math.random() - 0.5);
+        return shuffled.slice(0, 12);
+    }, [services]);
+    
     // Create skeleton data arrays
     const categorySkeletonData = useMemo(() => Array.from({ length: 3 }, (_, i) => i), []);
     const randomCategorySkeletonData = useMemo(() => Array.from({ length: 3 }, (_, i) => i), []);
-    const serviceSkeletonData = useMemo(() => Array.from({ length: 21 }, (_, i) => i), []);
+    const serviceSkeletonData = useMemo(() => Array.from({ length: 12 }, (_, i) => i), []);
 
     // Style for random categories list container
     const randomCategoriesListStyle = useMemo(() => ({

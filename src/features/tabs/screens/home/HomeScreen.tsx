@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
-import { FlatList, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Banner from '../../../../components/banner/Banner';
-import { HomeServiceList, RoundedCaurousel } from '../../../../components/list';
+import { HomeServiceList, RandomCategoriesList, RoundedCaurousel } from '../../../../components/list';
 import UserProfile from '../../../../components/user/UserProfile';
 import { useTheme } from '../../../../theme/ThemeProvider';
 import useHomeScreen from '../../hooks/home/useHomeScreen';
@@ -55,28 +55,16 @@ const HomeScreen = () => {
           renderSkeletonItem={renderSkeletonItem}
           skeletonKeyExtractor={skeletonKeyExtractor}
         />
-  
-        {isLoadingCategories ? (
-          <FlatList
-            data={randomCategorySkeletonData}
-            renderItem={renderCategorySkeletonItem}
-            keyExtractor={categorySkeletonKeyExtractor}
-            scrollEnabled={false}
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={randomCategoriesListStyle}
-  
-          />
-        ) : (
-          <FlatList
-            data={randomCategories}
-            renderItem={renderCategoryItem}
-            keyExtractor={categoryKeyExtractor}
-            scrollEnabled={false}
-            showsVerticalScrollIndicator={false}
-            contentContainerStyle={randomCategoriesListStyle}
-            ItemSeparatorComponent={null}
-          />
-        )}
+        <RandomCategoriesList
+          data={randomCategories}
+          renderItem={renderCategoryItem}
+          keyExtractor={categoryKeyExtractor}
+          loading={isLoadingCategories}
+          skeletonData={randomCategorySkeletonData}
+          renderSkeletonItem={renderCategorySkeletonItem}
+          skeletonKeyExtractor={categorySkeletonKeyExtractor}
+          contentContainerStyle={randomCategoriesListStyle}
+        />
       
         <HomeServiceList
           title="Serviços"
