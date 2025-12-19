@@ -55,6 +55,7 @@ const createHomeServiceListStyles = (theme: AppTheme) => {
             flexDirection: 'column',
             alignItems: 'flex-start',
             justifyContent: 'flex-start',
+            paddingHorizontal: theme.spacing(4),
         },
         listContainer: {
             alignItems: 'center',

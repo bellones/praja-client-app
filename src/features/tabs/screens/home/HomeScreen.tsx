@@ -1,58 +1,42 @@
-import { useCallback, useMemo } from 'react';
-import { ScrollView } from 'react-native';
+import { useMemo } from 'react';
+import { FlatList, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Banner from '../../../../components/banner/Banner';
-import { HomeServiceList, HomeServiceListItem, RoundedCaurousel } from '../../../../components/list';
-import HomeServiceListItemSkeleton from '../../../../components/list/HomeServiceListItemSkeleton';
-import RoundedCaurouselItem from '../../../../components/list/RoundedCaurouselItem';
-import RoundedCaurouselItemSkeleton from '../../../../components/list/RoundedCaurouselItemSkeleton';
+import { HomeServiceList, RoundedCaurousel } from '../../../../components/list';
 import UserProfile from '../../../../components/user/UserProfile';
 import { useTheme } from '../../../../theme/ThemeProvider';
 import useHomeScreen from '../../hooks/home/useHomeScreen';
-import { Category, Service } from '../../types';
 import createHomeStyles from './HomeStyles';
+
 const HomeScreen = () => {
   const { theme } = useTheme();
-
   const styles = useMemo(() => createHomeStyles(theme), [theme]);
-  const { user, categories, keyExtractor, services, isLoadingCategories, isLoadingServices } = useHomeScreen();
-
-  // Create skeleton data arrays
-  const categorySkeletonData = useMemo(() => Array.from({ length: 3 }, (_, i) => i), []);
-  const serviceSkeletonData = useMemo(() => Array.from({ length: 21 }, (_, i) => i), []);
-
-  const renderItem = useCallback(
-    ({ item }: { item: Category }) => <RoundedCaurouselItem category={item} />,
-    []
-  );
-  
-  const renderSkeletonItem = useCallback(
-    ({ index }: { index: number }) => <RoundedCaurouselItemSkeleton index={index} />,
-    []
-  );
-
-  const skeletonKeyExtractor = useCallback(
-    (item: number) => `skeleton-category-${item}`,
-    []
-  );
-
-  const renderServiceItem = useCallback(
-    ({ item, index }: { item: Service, index: number }) => <HomeServiceListItem service={item} index={index} />,
-    []
-  );
-
-  const renderServiceSkeletonItem = useCallback(
-    ({ index }: { index: number }) => <HomeServiceListItemSkeleton index={index} />,
-    []
-  );
-
-  const serviceSkeletonKeyExtractor = useCallback(
-    (item: number) => `skeleton-service-${item}`,
-    []
-  );
+  const {
+    user,
+    categories,
+    keyExtractor,
+    services,
+    randomCategories,
+    isLoadingCategories,
+    isLoadingServices,
+    categorySkeletonData,
+    randomCategorySkeletonData,
+    serviceSkeletonData,
+    randomCategoriesListStyle,
+    renderItem,
+    renderSkeletonItem,
+    skeletonKeyExtractor,
+    renderServiceItem,
+    renderServiceSkeletonItem,
+    serviceSkeletonKeyExtractor,
+    renderCategoryItem,
+    renderCategorySkeletonItem,
+    categoryKeyExtractor,
+    categorySkeletonKeyExtractor,
+  } = useHomeScreen();
 
   return (  
-    <ScrollView>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <SafeAreaView style={styles.container}>
         <UserProfile user={user} /> 
         <Banner />
@@ -71,6 +55,29 @@ const HomeScreen = () => {
           renderSkeletonItem={renderSkeletonItem}
           skeletonKeyExtractor={skeletonKeyExtractor}
         />
+  
+        {isLoadingCategories ? (
+          <FlatList
+            data={randomCategorySkeletonData}
+            renderItem={renderCategorySkeletonItem}
+            keyExtractor={categorySkeletonKeyExtractor}
+            scrollEnabled={false}
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={randomCategoriesListStyle}
+  
+          />
+        ) : (
+          <FlatList
+            data={randomCategories}
+            renderItem={renderCategoryItem}
+            keyExtractor={categoryKeyExtractor}
+            scrollEnabled={false}
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={randomCategoriesListStyle}
+            ItemSeparatorComponent={null}
+          />
+        )}
+      
         <HomeServiceList
           title="Serviços"
           data={services}

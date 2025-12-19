@@ -65,6 +65,7 @@ const createRoundedCaurouselStyles = (theme: AppTheme) => {
             flexDirection: 'column',
             gap: theme.spacing(2),
             paddingVertical: theme.spacing(4),
+            paddingHorizontal: theme.spacing(4),
         },
         listContainer: {
             flexDirection: 'row',
