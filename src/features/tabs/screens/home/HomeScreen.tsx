@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Banner from '../../../../components/banner/Banner';
-import { HomeServiceList, RandomCategoriesList, RoundedCaurousel } from '../../../../components/list';
+import { RandomCategoriesList, RoundedCaurousel } from '../../../../components/list';
 import UserProfile from '../../../../components/user/UserProfile';
 import { useTheme } from '../../../../theme/ThemeProvider';
 import useHomeScreen from '../../hooks/home/useHomeScreen';
@@ -15,20 +15,14 @@ const HomeScreen = () => {
     user,
     categories,
     keyExtractor,
-    services,
     randomCategories,
     isLoadingCategories,
-    isLoadingServices,
     categorySkeletonData,
     randomCategorySkeletonData,
-    serviceSkeletonData,
     randomCategoriesListStyle,
     renderItem,
     renderSkeletonItem,
     skeletonKeyExtractor,
-    renderServiceItem,
-    renderServiceSkeletonItem,
-    serviceSkeletonKeyExtractor,
     renderCategoryItem,
     renderCategorySkeletonItem,
     categoryKeyExtractor,
@@ -64,17 +58,6 @@ const HomeScreen = () => {
           renderSkeletonItem={renderCategorySkeletonItem}
           skeletonKeyExtractor={categorySkeletonKeyExtractor}
           contentContainerStyle={randomCategoriesListStyle}
-        />
-      
-        <HomeServiceList
-          title="Serviços"
-          data={services}
-          renderItem={renderServiceItem}
-          keyExtractor={keyExtractor}
-          loading={isLoadingServices}
-          skeletonData={serviceSkeletonData}
-          renderSkeletonItem={renderServiceSkeletonItem}
-          skeletonKeyExtractor={serviceSkeletonKeyExtractor}
         />
       </SafeAreaView>
     </ScrollView>
