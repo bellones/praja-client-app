@@ -1,40 +1,43 @@
-import { StyleSheet } from "react-native";
-import { AppTheme } from "../../../../theme/types";
+import { StyleSheet } from 'react-native';
+import { AppTheme } from '../../../../theme/types';
 
-const createProfileStyles = (theme: AppTheme) =>
-    StyleSheet.create({
-      container: {
-        flex: 1,
-        backgroundColor: theme.colors.background,
-        padding: theme.spacing(4),
-      },
-      content: {
-        // flex: 1,
-        // justifyContent: 'space-between',
-      },
-      userInfo: {
-        marginTop: theme.spacing(4),
-      },
-      label: {
-        fontSize: 14,
-        fontFamily: theme.fonts.primary,
-        fontWeight: '500',
-        color: theme.colors.textSecondary,
-        marginTop: theme.spacing(3),
-        marginBottom: theme.spacing(1),
-      },
-      value: {
-        fontSize: 16,
-        fontFamily: theme.fonts.primary,
-        fontWeight: '400',
-        color: theme.colors.text,
-      },
-      title: {
-        fontSize: 28,
-        fontWeight: '500',
-        color: theme.colors.text,
-        fontFamily: theme.fonts.secondary,
+export const createProfileStyles = (theme: AppTheme) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: theme.colors.background,
     },
-    });
-
-export default createProfileStyles;
+    scrollView: {
+      flexGrow: 1,
+    },
+    content: {
+      paddingTop: theme.spacing(2),
+    },
+    menuSection: {
+      marginTop: theme.spacing(2),
+      backgroundColor: theme.colors.background,
+    },
+    separator: {
+      height: 1,
+      backgroundColor: theme.colors.border,
+      marginLeft: theme.spacing(4),
+    },
+    loadingContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    errorContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: theme.spacing(4),
+    },
+    errorText: {
+      fontSize: 16,
+      color: theme.colors.danger,
+      fontFamily: theme.fonts.primary,
+      textAlign: 'center',
+      marginBottom: theme.spacing(2),
+    },
+  });
