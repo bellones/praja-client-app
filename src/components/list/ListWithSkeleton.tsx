@@ -48,6 +48,8 @@ const ListWithSkeleton = <TData, TSkeleton>({
     maxToRenderPerBatch,
     windowSize,
     removeClippedSubviews,
+    keyboardShouldPersistTaps: 'handled' as const,
+    keyboardDismissMode: 'none' as const,
   };
 
   return (
