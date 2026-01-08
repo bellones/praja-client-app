@@ -2,20 +2,20 @@ import { CommonActions, useNavigation } from '@react-navigation/native';
 import { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
 import {
-    ArrowRightOnRectangleIcon,
-    BellIcon,
-    ChatBubbleLeftRightIcon,
-    CreditCardIcon,
-    HeartIcon,
-    HomeIcon,
-    QrCodeIcon,
-    StarIcon,
-    TicketIcon,
-    UserIcon
+  ArrowRightOnRectangleIcon,
+  BellIcon,
+  ChatBubbleLeftRightIcon,
+  CreditCardIcon,
+  HeartIcon,
+  HomeIcon,
+  QrCodeIcon,
+  StarIcon,
+  TicketIcon,
+  UserIcon
 } from 'react-native-heroicons/outline';
 
 import { ProfileHeader, ProfileMenuItem } from '../../../../components/profile';
-import { MainTabsScreenProps } from '../../../../navigation/types';
+import { MainTabsScreenProps, RootStackNavigationProp } from '../../../../navigation/types';
 import { useAuthStore } from '../../../../state';
 import { useTheme } from '../../../../theme/ThemeProvider';
 
@@ -47,10 +47,31 @@ const useProfileScreen = () => {
         handleLogout();
         return;
       }
-      // Placeholder for menu navigation
-      console.log(`Menu item pressed: ${menuId}`);
+
+      // Map menu IDs to ProfileStack screen names
+      const screenMap: Record<string, keyof import('../../../../navigation/types').ProfileStackParamList> = {
+        'conversas': 'Conversations',
+        'notificacoes': 'Notifications',
+        'dados-conta': 'AccountData',
+        'endereco': 'Address',
+        'pagamentos': 'Payments',
+        'cupons': 'Coupons',
+        'codigo-entrega': 'ServiceExecutionCode',
+        'fidelidade': 'Loyalty',
+        'favoritos': 'Favorites',
+      };
+
+      const screenName = screenMap[menuId];
+      if (screenName) {
+        const rootNavigation = navigation.getParent<RootStackNavigationProp<'ProfileStack'>>();
+        if (rootNavigation) {
+          rootNavigation.navigate('ProfileStack', { 
+            screen: screenName
+          });
+        }
+      }
     },
-    [handleLogout]
+    [handleLogout, navigation]
   );
 
   const menuItems = useMemo(

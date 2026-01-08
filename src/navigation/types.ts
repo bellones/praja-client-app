@@ -13,6 +13,10 @@ import type {
     Splash: undefined;
     Auth: undefined;
     App: undefined;
+    ProfileStack: {
+      screen: keyof ProfileStackParamList;
+      params?: ProfileStackParamList[keyof ProfileStackParamList];
+    };
   };
   
   export type AuthStackParamList = {
@@ -32,6 +36,17 @@ import type {
     Profile: undefined;
   };
   
+  export type ProfileStackParamList = {
+    Conversations: undefined;
+    Notifications: undefined;
+    AccountData: undefined;
+    Address: undefined;
+    Payments: undefined;
+    Coupons: undefined;
+    ServiceExecutionCode: undefined;
+    Loyalty: undefined;
+    Favorites: undefined;
+  };
   
   export type RootStackScreenProps<T extends keyof RootStackParamList> =
     NativeStackScreenProps<RootStackParamList, T>;
@@ -51,4 +66,13 @@ import type {
   
   export type MainTabsNavigationProp<T extends keyof MainTabsParamList> =
     BottomTabNavigationProp<MainTabsParamList, T>;
+  
+  export type ProfileStackScreenProps<T extends keyof ProfileStackParamList> =
+    CompositeScreenProps<
+      NativeStackScreenProps<ProfileStackParamList, T>,
+      NativeStackScreenProps<RootStackParamList>
+    >;
+  
+  export type ProfileStackNavigationProp<T extends keyof ProfileStackParamList> =
+    NativeStackNavigationProp<ProfileStackParamList, T>;
   

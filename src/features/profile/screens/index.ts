@@ -1,0 +1,9 @@
+export { default as ConversationsScreen } from './conversations/ConversationsScreen';
+export { default as NotificationsScreen } from './notifications/NotificationsScreen';
+export { default as AccountDataScreen } from './accountData/AccountDataScreen';
+export { default as AddressScreen } from './address/AddressScreen';
+export { default as PaymentsScreen } from './payments/PaymentsScreen';
+export { default as CouponsScreen } from './coupons/CouponsScreen';
+export { default as ServiceExecutionCodeScreen } from './serviceExecutionCode/ServiceExecutionCodeScreen';
+export { default as LoyaltyScreen } from './loyalty/LoyaltyScreen';
+export { default as FavoritesScreen } from './favorites/FavoritesScreen';
