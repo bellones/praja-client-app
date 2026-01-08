@@ -5,6 +5,7 @@ import React from 'react';
 
 import { ForgetPasswordScreen, LoginScreen, RecoverPasswordScreen, RegisterScreen, SplashScreen } from '../features/auth/screens';
 import { useTheme } from '../theme/ThemeProvider';
+import { ProfileStackNavigator } from './ProfileNavigation';
 import { MainTabs } from './TabsNavigation';
 import {
   AuthStackParamList,
@@ -85,6 +86,7 @@ export const RootNavigator: React.FC = () => {
         <RootStack.Screen name="Splash" component={SplashScreen} />
         <RootStack.Screen name="Auth" component={AuthStackNavigator} />
         <RootStack.Screen name="App" component={MainTabs} />
+        <RootStack.Screen name="ProfileStack" component={ProfileStackNavigator} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
