@@ -15,8 +15,19 @@ export const createAddressStyles = (theme: AppTheme) =>
       padding: theme.spacing(4),
     },
     text: {
-      fontSize: 16,
+      fontSize: 24,
       color: theme.colors.text,
+      fontFamily: theme.fonts.primary,
+      fontWeight: 'bold',
+    },
+    row: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    link: {
+      fontSize: 16,
+      color: theme.colors.primary,
       fontFamily: theme.fonts.primary,
     },
   });

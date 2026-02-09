@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AppBar } from '../../../../components/appbar';
 import { useTheme } from '../../../../theme/ThemeProvider';
@@ -11,10 +11,19 @@ const AddressScreen = () => {
 
   return (
     <View style={styles.container}>
-      <AppBar title="Endereço" />
+      <AppBar />
       <SafeAreaView style={styles.content} edges={['bottom', 'left', 'right']}>
         <ScrollView contentContainerStyle={styles.scrollContent}>
-          <Text style={styles.text}>Endereço</Text>
+          <View style={styles.row}>
+            <Text style={styles.text}>Endereços</Text>
+            <TouchableOpacity
+              onPress={() => {}}
+              hitSlop={20}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.link}>Adicionar</Text>
+            </TouchableOpacity>
+          </View>
         </ScrollView>
       </SafeAreaView>
     </View>
